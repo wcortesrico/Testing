@@ -1,4 +1,5 @@
 from palindrom import palindrom
+from rover import Rover
 
 
 def test_palindrom():
@@ -6,5 +7,6 @@ def test_palindrom():
     assert palindrom('flower') == False
 
 
-
+def test_rover():
+    assert Rover().position(0, 0) == [0, 0]
 
