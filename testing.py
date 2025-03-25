@@ -1,8 +1,10 @@
-def quad(n):
-    return n * n
+from palindrom import palindrom
 
-def test_quad():
-    assert quad(3) == 9
 
-def testquad2():
-    assert quad(4) == 3
+def test_palindrom():
+    assert palindrom('radar') == True
+    assert palindrom('flower') == False
+
+
+
+
