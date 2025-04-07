@@ -25,11 +25,12 @@ def test_rover_backward():
 
 
 def test_rover_right():
-    assert Rover([0, 0], "E").right() == [1, 0]
+    assert Rover([0, 0], "N").right() == [1, 0]
 
 def test_rover_left():
-    assert Rover([0, 0], "W").left() == [10, 0]
+    assert Rover([0, 0], "N").left() == [10, 0]
 
 def test_grid():
     assert Rover([0, 10], "E").forward() == [0, 0]
     assert Rover([0, 0], "E").backward() == [0, 10]
+
