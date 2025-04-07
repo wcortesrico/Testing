@@ -26,3 +26,9 @@ def test_rover_backward():
 
 def test_rover_right():
     assert Rover([0, 0], "E").right() == [1, 0]
+
+def test_rover_left():
+    assert Rover([0, 0], "E").left() == [-1, 0]
+
+def test_grid():
+    assert Rover()
