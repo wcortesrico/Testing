@@ -16,11 +16,17 @@ class Rover:
         return self.dir
 
     def forward(self):
-        self.pos[1] += 1
+        if self.pos[1] < 10:
+            self.pos[1] += 1
+        else:
+            self.pos[1] = 0
         return self.pos
 
     def backward(self):
-        self.pos[1] -= 1
+        if self.pos[1] > 0:
+            self.pos[1] -= 1
+        else:
+            self.pos[1] = 10
         return self.pos
     
     def right(self):
@@ -28,5 +34,8 @@ class Rover:
         return self.pos
 
     def left(self):
-        self.pos[0] -= 1
+        if self.pos[0] > 0:
+            self.pos[0] -= 1
+        else:
+            self.pos[0] = 10
         return self.pos
