@@ -30,12 +30,16 @@ class Rover:
         return self.pos
     
     def right(self):
-        self.pos[0] += 1
-        return self.pos
+        if self.dir == "N":
+            self.dir = "E"
+        elif self.dir == "E":
+            self.dir = "S"
+        elif self.dir == "S":
+            self.dir = "W"
+        elif self.dir == "W":
+            self.dir = "N"
+        return self.dir
 
     def left(self):
-        if self.pos[0] > 0:
-            self.pos[0] -= 1
-        else:
-            self.pos[0] = 10
+        self.pos[0] = 0
         return self.pos
