@@ -24,3 +24,5 @@ def test_rover_backward():
     assert Rover([0, 0], "N").backward() == [0, -1]
 
 
+def test_rover_right():
+    assert Rover([0, 0], "E").right() == [1, 0]

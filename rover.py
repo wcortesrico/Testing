@@ -22,3 +22,7 @@ class Rover:
     def backward(self):
         self.pos[1] -= 1
         return self.pos
+    
+    def right(self):
+        self.pos[0] += 1
+        return self.pos
